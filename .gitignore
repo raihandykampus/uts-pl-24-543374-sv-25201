@@ -1,6 +1,11 @@
 # Root and OS files
 .DS_Store
 Thumbs.db
+.env
+.env.backup
+.env.production
+.env.local
+
 
 # IDE and Editor files
 .idea/
