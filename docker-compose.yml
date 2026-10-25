@@ -43,7 +43,7 @@ services:
       - "${BACKEND_PORT:-8000}:8000"
     volumes:
       - ./backend:/app
-      - /app/vendor
+      - backend_vendor:/app/vendor
     depends_on:
       db:
         condition: service_healthy
@@ -67,6 +67,8 @@ services:
 
 volumes:
   pgdata:
+    driver: local
+  backend_vendor:
     driver: local
 
 networks:
